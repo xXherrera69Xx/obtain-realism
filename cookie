@@ -1,0 +1,12 @@
+
+        if (isset($_POST['remember']) && $_POST['remember']) {
+          setcookie('email', $_POST['email'], time() + 20 * 86400, '/');
+          setcookie('password', sha1($_POST['password']), time() + 20 * 86400, '/');
+
+          $_COOKIE['email'] = $_POST['email'];
+          $_COOKIE['password'] = $_POST['password'];
+        }
+
+
+
+xdd
