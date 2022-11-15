@@ -9,4 +9,32 @@
 
 
 
-xdd
+vereficar
+
+
+
+session_start();
+if ((isset($_COOKIE['email']) || isset($_COOKIE['password'])) && !isset($_SESSION['user'])) {
+  $sqlLogin = "SELECT users.*, users_roles.role_id FROM users 
+                  LEFT JOIN users_roles 
+                    ON users.id = users_roles.user_id
+                  WHERE users.email='" . $_COOKIE['email'] . "' AND users.password='" . $_COOKIE['password'] . "' AND users.deleted_at IS NULL";
+  $resultLogin = mysqli_query($conn, $sqlLogin);
+  if (mysqli_num_rows($resultLogin) === 1) {
+    $_SESSION['user'] = mysqli_fetch_assoc($resultLogin);
+  }
+}
+
+
+
+unset cookies 
+
+
+
+if (isset($_COOKIE['email']) || isset($_COOKIE['password'])) {
+      unset($_COOKIE['email']);
+      unset($_COOKIE['password']);
+      setcookie('email', $_POST['email'], time() - 20 * 86400, '/');
+      setcookie('password', sha1($_POST['password']), time() - 20 * 86400, '/');
+    }
+
