@@ -1,0 +1,124 @@
+#tercon_cont{
+    margin-top: 50px;
+}
+
+#tercon_cont div div div{
+    padding-top: 40px;
+    padding-left: 60px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    margin-top: 30px;
+    background-color: #e2e2e2;
+}
+
+#tercon_cont div div div li{
+    margin-left: 40px;
+}
+
+#menu{
+    width:98.2%;
+    background-color: #fafafa;
+}
+#logo_menu{
+    margin-left:20%;
+    width:150px;
+    height:45px;
+    margin-top:20px;
+}
+
+#logo_menu{
+    cursor: pointer;
+}
+
+#items_menu{
+    margin-top:30px;
+}
+.itemss_menu{
+    text-align: center;
+}
+
+#items_menu div :hover{
+    color: red;
+    cursor:pointer;
+}
+
+.redes_menu{
+    margin-top: 33px;
+}
+
+.redes_menu img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.img_redes_menu{
+    width:20px;
+    height:20px;
+}
+
+#ig{
+    margin-left:35px;
+}
+
+#btn_descargar{
+    border:black 1px solid;
+    width:150px;
+    height:40px;
+    border-radius:20px;
+    text-align:center;
+    padding-top:5px;
+    padding-bottom:10px;
+    margin-top:29px;
+}
+
+#btn_descargar:hover{
+    color:white;
+    background-color: red;
+    cursor: pointer;
+}
+
+#btn_des{
+    display:none;
+    padding: 0;
+}
+#mobile_menu{
+    display:none;
+}
+
+@media only screen and (max-width: 1023px) {
+    #redes_menu{
+        display:none;
+    }
+    #secciones_menu{
+        display:none;
+
+    }
+    #menu{
+        width:98.2%;
+    }
+    #btn_des{
+        display:block;
+    }
+    #btn_des div{
+        width: 50px;
+        float:right;
+        text-align:center;
+    }
+    #mobile_menu{
+        display: block;
+        position: absolute;
+        z-index: -1;
+        width: 100vw;
+        text-align:center;
+        font-weight: bold;
+        font-size: 20px;
+        background-color: transparent;
+    }
+    #ig{
+        margin-left:0;
+    }
+    #btn_descargar{
+        margin-left: 5%;
+        width:90%;
+    }
+}
